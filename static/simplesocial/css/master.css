@@ -1,0 +1,172 @@
+
+*{
+  font-family: Montserrat;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+  background-image: url('https://external-preview.redd.it/Tf2MC-orVRAI8OL5tjyF4k4H2Q6QLHTWllekGfqdt3c.png?width=960&crop=smart&auto=webp&s=be4ab9a2fa3ca2f7011799377f118a8dbc64aacb');
+  background-size: cover;
+  height: auto;
+  width: 100vw;
+  background-repeat: no-repeat;
+  color:white;
+}
+/* nav  */
+.main-container .header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.main-container .main-nav .nav-container .nav-list{
+  padding-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+}
+.main-container header .Brand{
+  color: white;
+  font-weight: 200px;
+  font-size: 50px;
+  text-decoration: none;
+}
+.main-container header .Brand:hover{
+  text-shadow: 2px 2px red;
+}
+.main-container .main-nav .nav-container .nav-list li a{
+  color: whitesmoke;
+  padding-right: 30px;
+  font-size: 20px;
+}
+
+
+/* endnav  */
+.main-container>.container>.welcome_screen{
+  margin-top: 100px;      
+}
+.main-container>.container>.welcome_screen>h1{
+  font-size: 100px;
+  font-family: Montserrat;
+}
+.main-container>.container>.welcome_screen>h2{
+  font-size: 40PX;
+  font-family: Montserrat;
+}
+
+
+/* Mobile Media Query */
+@media only screen 
+  and (min-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) { 
+  .main-container{
+    width: 100%;
+    height: auto;
+    font-size: 2rem;
+    z-index: 100;
+  }
+  .main-container header{
+    padding-top: 30px;
+    width: 100%;
+    height: auto;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+  }
+  .main-container header .Brand{
+    color: white;
+	  font-weight: 300;
+    font-size: 60px;
+    font-family: Montserrat;
+ 
+  }
+
+  .main-container header .main-nav .nav-container{
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0%;
+    top: 120px;
+    background-color: #27b7e279;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding: 20px 0;
+    transition: 0.5s ease-in-out transform;
+    transform: translateX(-100%);
+  }
+  .main-container header .main-nav .nav-toggle{
+    transform: translateX(0%);
+  }
+  .main-container header .main-nav .nav-container .nav-list{
+    list-style: none;
+	  display: flex;
+	  flex-direction: column;
+	  padding-bottom: 10px;
+  }
+  .main-container header .main-nav .nav-container .nav-list li{
+    padding: 5px 0;
+  }
+  .main-container header .main-nav .nav-container .nav-list li a{
+    font-size: 5rem;
+  	text-decoration: none;
+  	color: white;
+  	text-transform: uppercase;
+  	letter-spacing: 1px;
+  }
+  .main-container header .ham{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+  }
+  .main-container header .bar{
+    width: 45px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+  }
+  .main-container header .bar::after,
+  .main-container header .bar::before{
+    content: '';
+    width: 45px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+  }
+  .main-container header .bar::after{
+    top: -15px;
+  }
+  .main-container header .bar::before{
+    bottom: -15px;
+  }
+  .main-container header .on-ham .bar::before{
+    top: 0px;
+    transform: rotate(45deg);
+  }
+  .main-container header .on-ham .bar::after{
+    top: 0px;
+    transform: rotate(-45deg);
+  }
+  .main-container header .on-ham .bar{
+    background-color: transparent;
+  }
+  .main-container .mycontent{
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    align-items: center;    
+  }
+}
+
